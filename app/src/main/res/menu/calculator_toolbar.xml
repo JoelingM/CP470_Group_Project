@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/calculator_toolbar">
+
+    <item
+        android:id="@+id/about_Item"
+        android:orderInCategory="141"
+        android:title="@string/jm_toolbar_about"
+        app:showAsAction="never" />
+</menu>

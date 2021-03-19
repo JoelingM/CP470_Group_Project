@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="3"
+    android:rowCount="4">
+
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:text="@string/ab_setCurrentWeight" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="183dp"
+        android:layout_height="46dp"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:ems="10"
+        android:inputType="none|number|numberDecimal" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_column="2"
+        android:text="@string/ab_save"
+        android:onClick="SaveCurrentWeight"/>
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="1"
+        android:layout_column="2"
+        android:onClick="SaveGoalWeight"
+        android:text="@string/ab_save" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:text="@string/ab_setGoalWeight" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="179dp"
+        android:layout_height="wrap_content"
+        android:layout_row="1"
+        android:layout_column="1"
+        android:ems="10"
+        android:inputType="number|numberDecimal"
+        android:text="" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="2"
+        android:layout_column="0"
+        android:text="@string/ab_goBack"
+        android:onClick="GoBackToMain"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="86dp"
+        android:layout_height="wrap_content"
+        android:layout_row="2"
+        android:layout_column="2"
+        android:onClick="GoToGoals"
+        android:text="@string/ab_goToGoals" />
+</GridLayout>

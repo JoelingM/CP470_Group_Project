@@ -1,0 +1,874 @@
+@startuml
+
+title __PROJECT's Class Diagram__\n
+
+  namespace com.group.project {
+    class com.group.project.CalculatorActivity {
+        ~ result : String
+        {static} + applyOp()
+        + evaluate()
+        {static} + hasPrecedence()
+        + onCreateOptionsMenu()
+        + onOptionsItemSelected()
+        + switchToEqFrag()
+        + switchToKeyFrag()
+        + switchToVarFrag()
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.CalculatorEquationsActivity {
+        + ansTV : TextView
+        + eqLV : ListView
+        + equTV : TextView
+        + progBar : ProgressBar
+        - equationList : ArrayList<String>
+        + CalculatorEquationsActivity()
+        + onCreateView()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.CalculatorEquationsActivity.equationAdapter {
+        + equationAdapter()
+        + getCount()
+        + getItem()
+        + getView()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.CalculatorEquationsActivity.fillListView {
+        # doInBackground()
+        # onPostExecute()
+        # onPreExecute()
+        # onProgressUpdate()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.CalculatorKeypadActivity {
+        + ansTV : TextView
+        + equTV : TextView
+        + keyLayout : LinearLayout
+        + CalculatorKeypadActivity()
+        + onCreateView()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.CalculatorVarpadActivity {
+        + ansTV : TextView
+        + equTV : TextView
+        + keyLayout : LinearLayout
+        + CalculatorVarpadActivity()
+        + onCreateView()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.CalenderActivity {
+        + onCreateOptionsMenu()
+        + onOptionsItemSelected()
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.Contact {
+        {static} + CREATOR : Creator<Contact>
+        - icon : Bitmap
+        - id : long
+        - name : String
+        - phoneNumbers : List<String>
+        + Contact()
+        + Contact()
+        + Contact()
+        + compareTo()
+        + describeContents()
+        + getID()
+        + getIcon()
+        + getName()
+        + getPhoneNumbers()
+        + setID()
+        + setIcon()
+        + setName()
+        + setPhoneNumbers()
+        + writeToParcel()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.ContactActivity {
+        - contacts : List<Contact>
+        - hasDetailSpace : boolean
+        - progressBar : ProgressBar
+        - toolbar : Toolbar
+        + onContactDetailFragmentRemoved()
+        + onCreateOptionsMenu()
+        + onOptionsItemSelected()
+        # onActivityResult()
+        # onCreate()
+        # onPause()
+        # onResume()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.ContactActivity.ContactAdapter {
+        - contacts : List<Contact>
+        + ContactAdapter()
+        + getItemCount()
+        + onBindViewHolder()
+        + onCreateViewHolder()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.ContactActivity.ContactAdapter.ContactViewHolder {
+        + icon : ImageView
+        + name : TextView
+        + number : TextView
+        + ContactViewHolder()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.ContactDetailActivity {
+        - toolbar : Toolbar
+        + onActivityResult()
+        + onCreateOptionsMenu()
+        + onOptionsItemSelected()
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.ContactDetailFragment {
+        - icon : ImageView
+        - name : TextView
+        + ContactDetailFragment()
+        + onCreate()
+        + onCreateView()
+        + onDestroy()
+    }
+  }
+  
+
+  namespace com.group.project {
+    interface com.group.project.ContactDetailFragment.ContactDetailFragmentRemovedListener {
+        {abstract} + onContactDetailFragmentRemoved()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.ContactDetailFragment.NumberAdapter {
+        ~ numbers : List<String>
+        + NumberAdapter()
+        + getItemCount()
+        + onBindViewHolder()
+        + onCreateViewHolder()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.ContactDetailFragment.NumberAdapter.NumberViewHolder {
+        # callButton : ImageButton
+        # number : TextView
+        # smsButton : ImageButton
+        + NumberViewHolder()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.ContactEditActivity {
+        {static} + MAX_ICON_DIM : int
+        {static} + PERM_REQ_CAMERA : int
+        {static} + PERM_REQ_READ_EXTERNAL_STORAGE : int
+        {static} + REQUEST_CODE_EDIT : int
+        {static} + REQ_LOCAL_CAMERA : int
+        {static} + REQ_PICK_GALLERY : int
+        {static} + RESULT_CODE_DELETED : int
+        {static} + RESULT_CODE_SAVED : int
+        - currentPhotoPath : String
+        - currentPhotoUri : Uri
+        - editIconButton : ImageButton
+        - icon : ImageView
+        - name : TextView
+        - progressBar : ProgressBar
+        + onCreateOptionsMenu()
+        + onOptionsItemSelected()
+        + onRequestPermissionsResult()
+        # onActivityResult()
+        # onCreate()
+        - createImageFile()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.ContactEditActivity.EditNumberAdapter {
+        ~ numbers : List<String>
+        + EditNumberAdapter()
+        + getItemCount()
+        + onBindViewHolder()
+        + onCreateViewHolder()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.ContactEditActivity.EditNumberAdapter.EditNumberViewHolder {
+        # deleteButton : ImageButton
+        # editButton : ImageButton
+        # number : TextView
+        + EditNumberViewHolder()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.ContactSQLHelper {
+        {static} + CONTACT_CREATE : String
+        {static} + CONTACT_ID : String
+        {static} + CONTACT_NAME : String
+        {static} + DATABASE_NAME : String
+        {static} + DATABASE_VERSION : int
+        {static} + ICON_CONTACT_ID : String
+        {static} + ICON_CREATE : String
+        {static} + ICON_ICON : String
+        {static} + ICON_ID : String
+        {static} + NUMBER_CONTACT_ID : String
+        {static} + NUMBER_CREATE : String
+        {static} + NUMBER_ID : String
+        {static} + NUMBER_NUMBER : String
+        {static} + NUMBER_PRIORITY : String
+        {static} + TABLE_CONTACT : String
+        {static} + TABLE_ICON : String
+        {static} + TABLE_NUMBER : String
+        + onCreate()
+        + onOpen()
+        + onUpgrade()
+        ~ ContactSQLHelper()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.ContactSQLHelper.DeleteContactsTask {
+        ~ finishOnCompleteActivity : Activity
+        ~ progressBar : ProgressBar
+        ~ returnCode : Integer
+        # doInBackground()
+        # onPostExecute()
+        # onPreExecute()
+        # onProgressUpdate()
+        ~ DeleteContactsTask()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.ContactSQLHelper.GetContactsTask {
+        ~ adapter : Adapter
+        ~ progressBar : ProgressBar
+        ~ writeContacts : List<Contact>
+        # doInBackground()
+        # onPostExecute()
+        # onPreExecute()
+        # onProgressUpdate()
+        ~ GetContactsTask()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.ContactSQLHelper.SaveContactsTask {
+        ~ finishOnCompleteActivity : Activity
+        ~ progressBar : ProgressBar
+        ~ returnCode : Integer
+        + addContact()
+        + updateContact()
+        # doInBackground()
+        # onPostExecute()
+        # onPreExecute()
+        # onProgressUpdate()
+        ~ SaveContactsTask()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.CreateClass {
+        - db : SQLiteDatabase
+        - id : long
+        - newEvent : boolean
+        # onCreate()
+        # onDestroy()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.CreateEvent {
+        - currentSteps : int
+        - db : SQLiteDatabase
+        - id : long
+        - newEvent : boolean
+        - picker : DatePickerDialog
+        - sharedPreferences : SharedPreferences
+        # onCreate()
+        # onDestroy()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.EventList {
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.MainActivity {
+        - myName : String
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.NotepadEditActivity {
+        {static} + NOTE_EXTRA_KEY : String
+        - editNoteText : EditText
+        - editTitleText : EditText
+        + onCreateOptionsMenu()
+        + onOptionsItemSelected()
+        # onCreate()
+        - onSaveNote()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.NotepadMainActivity {
+        - db : SQLiteDatabase
+        - firstStart : Boolean
+        - notes : ArrayList<Note>
+        - progBar : ProgressBar
+        - recyclerView : RecyclerView
+        + onCreateOptionsMenu()
+        + onNoteClick()
+        + onNoteLongClick()
+        + onOptionsItemSelected()
+        # onCreate()
+        # onResume()
+        - EditNote()
+        - FinishSync()
+        - SetProgress()
+        - loadNotes()
+        - onAddNewNote()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.NotepadMainActivity.NoteQuery {
+        # doInBackground()
+        # onPostExecute()
+        # onProgressUpdate()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.NotificationReceiver {
+        {static} + NOTIFICATION : String
+        {static} + NOTIFICATION_ID : String
+        + onReceive()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.NotificationScheduler {
+        {static} + CHANNEL_ID : String
+        {static} + description : String
+        {static} + name : CharSequence
+        {static} - ID : int
+        {static} + cancelNotification()
+        {static} + createChannel()
+        {static} + getNotification()
+        {static} + scheduleNotification()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.addFood {
+        + returnToMain()
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.aeCalenderDatabaseHelper {
+        {static} + CLASS_TABLE : String
+        {static} + C_KEY_DATES : String
+        {static} + C_KEY_END_TIME : String
+        {static} + C_KEY_ID : String
+        {static} + C_KEY_LOCATION : String
+        {static} + C_KEY_NAME : String
+        {static} + C_KEY_NOTIFICATION_ID : String
+        {static} + C_KEY_SEMESTER : String
+        {static} + C_KEY_START_TIME : String
+        {static} + EVENT_TABLE : String
+        {static} + E_KEY_CLASS : String
+        {static} + E_KEY_CURRENT_STEPS : String
+        {static} + E_KEY_DATE : String
+        {static} + E_KEY_DESC : String
+        {static} + E_KEY_END_DATE : String
+        {static} + E_KEY_END_TIME : String
+        {static} + E_KEY_ID : String
+        {static} + E_KEY_NAME : String
+        {static} + E_KEY_NOTIFICATION_ID : String
+        {static} + E_KEY_REPEAT : String
+        {static} + E_KEY_SEMESTER : String
+        {static} + E_KEY_TIME : String
+        {static} + E_KEY_TOTAL_STEPS : String
+        {static} + E_KEY_TYPE : String
+        {static} + SEMESTERS_TABLE : String
+        {static} + S_KEY_DATE_END : String
+        {static} + S_KEY_DATE_START : String
+        {static} + S_KEY_ID : String
+        {static} + S_KEY_NAME : String
+        {static} + TYPES_TABLE : String
+        {static} + T_KEY_ID : String
+        {static} + T_KEY_NAME : String
+        {static} - CLASS_TABLE_CREATE : String
+        {static} - DATABASE_NAME : String
+        {static} - EVENT_TABLE_CREATE : String
+        {static} - SEMESTER_TABLE_CREATE : String
+        {static} - TYPES : String[]
+        {static} - TYPES_TABLE_CREATE : String
+        {static} - VERSION_NUM : int
+        {static} + addClass()
+        {static} + addEvent()
+        {static} + addSemester()
+        {static} + addType()
+        + aeCalenderDatabaseHelper()
+        {static} + getAllClassNames()
+        {static} + getAllClassNamesIds()
+        {static} + getAllSemesters()
+        {static} + getAllSemestersIds()
+        {static} + getAllTypes()
+        {static} + getAllTypesIds()
+        {static} + getClasses()
+        {static} + getEvents()
+        + onCreate()
+        + onDowngrade()
+        + onUpgrade()
+        {static} + removeClass()
+        {static} + removeEvent()
+        {static} + removeSemester()
+        {static} + updateClass()
+        {static} + updateEvent()
+        {static} + updateEventProgress()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.aeCalenderDatabaseHelper.ExecGetClasses {
+        - db : SQLiteDatabase
+        + ExecGetClasses()
+        # doInBackground()
+        # onPostExecute()
+    }
+  }
+  
+
+  namespace com.group.project {
+    interface com.group.project.aeCalenderDatabaseHelper.ExecGetClasses.AsyncResponseClass {
+        {abstract} + processFinish()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.aeCalenderDatabaseHelper.ExecGetEvents {
+        - db : SQLiteDatabase
+        + ExecGetEvents()
+        # doInBackground()
+        # onPostExecute()
+    }
+  }
+  
+
+  namespace com.group.project {
+    interface com.group.project.aeCalenderDatabaseHelper.ExecGetEvents.AsyncResponseEvent {
+        {abstract} + processFinish()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.aeClass {
+        {static} + CREATOR : Creator<aeClass>
+        - dates : String[]
+        - endTime : String
+        - id : long
+        - location : String
+        - name : String
+        - semester : String
+        - startTime : String
+        + aeClass()
+        + describeContents()
+        + getDates()
+        + getEndTime()
+        + getId()
+        + getLocation()
+        + getName()
+        + getSemester()
+        + getStartTime()
+        + setId()
+        + setTime()
+        + toString()
+        + writeToParcel()
+        - aeClass()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.aeClassAdapter {
+        - classes : ArrayList<aeClass>
+        - ctx : Context
+        + addClass()
+        + aeClassAdapter()
+        + getCount()
+        + getItem()
+        + getItemAtPos()
+        + getItemId()
+        + getView()
+        + removeClass()
+        + setClass()
+        + setClasses()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.aeEvent {
+        {static} + CREATOR : Creator<aeEvent>
+        - className : String
+        - currentSteps : int
+        - date : String
+        - desc : String
+        - endDate : String
+        - endTime : String
+        - id : long
+        - name : String
+        - notificationId : int
+        - repeat : int
+        - semester : String
+        - time : String
+        - totalSteps : int
+        - type : String
+        + addCurrentSteps()
+        + aeEvent()
+        + describeContents()
+        + getClassName()
+        + getCurrentSteps()
+        + getDate()
+        + getDesc()
+        + getEndDate()
+        + getEndTime()
+        + getId()
+        + getName()
+        + getNotificationId()
+        + getRepeat()
+        + getSemester()
+        + getTime()
+        + getTotalSteps()
+        + getType()
+        + setCurrentSteps()
+        + setId()
+        + setNotificationId()
+        + toString()
+        + writeToParcel()
+        - aeEvent()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.aeEventAdapter {
+        - ctx : Context
+        - events : ArrayList<aeEvent>
+        + addEvent()
+        + aeEventAdapter()
+        + getCount()
+        + getItem()
+        + getItemAtPos()
+        + getItemId()
+        + getView()
+        + removeEvent()
+        + setEvent()
+        + setEvents()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.foodDatabaseHelper {
+        {static} + KEY_Calories : String
+        {static} + KEY_Desc : String
+        {static} + KEY_Fat : String
+        {static} + KEY_Food : String
+        {static} + KEY_ID : String
+        {static} + Key_Date : String
+        {static} + TABLE_NAME : String
+        {static} - DATABASE_CREATE : String
+        {static} - DATABASE_NAME : String
+        {static} - VERSION_NUM : int
+        + foodDatabaseHelper()
+        + onCreate()
+        + onUpgrade()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.foodFragment {
+        ~ calText : TextView
+        ~ cals : String
+        ~ desc : String
+        ~ descText : TextView
+        ~ fat : String
+        ~ fatText : TextView
+        ~ id : String
+        ~ idText : TextView
+        ~ name : String
+        ~ nameText : TextView
+        + foodFragment()
+        + foodFragment()
+        + onCreate()
+        + onCreateView()
+        + onViewCreated()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.food_details {
+        ~ ID : String
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.food_list {
+        ~ LargeExists : boolean
+        ~ cursor : Cursor
+        ~ cval : ContentValues
+        - ACTIVITY_NAME : String
+        - db : SQLiteDatabase
+        - listener : OnItemClickListener
+        - mArray : ArrayList<String>
+        + addFood()
+        + removeMessage()
+        # DeleteStatement()
+        # InsertStatement()
+        # onActivityResult()
+        # onCreate()
+        # onDestroy()
+        # onResume()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.food_list.FoodAdapter {
+        + getCount()
+        + getItem()
+        + getItemId()
+        + getView()
+        - FoodAdapter()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.food_list.dbInteract {
+        # doInBackground()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.main_ab {
+        + GoToGoals()
+        + goToFoods()
+        + goToWeights()
+        + onCreateOptionsMenu()
+        + onOptionsItemSelected()
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.weightActivities {
+        ~ currentWeight : EditText
+        ~ goalWeight : EditText
+        - createGoal : boolean
+        + GoBackToMain()
+        + GoToGoals()
+        + SaveCurrentWeight()
+        + SaveGoalWeight()
+        + createGoal()
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.weight_Goals {
+        ~ current : float
+        ~ currentString : String
+        ~ currentText : TextView
+        ~ goalString : String
+        ~ goalText : TextView
+        ~ goalWeight : float
+        ~ origin : float
+        ~ originString : String
+        ~ originText : TextView
+        ~ pbar : ProgressBar
+        + getProgress()
+        # normalize()
+        # onCreate()
+    }
+  }
+  
+
+  com.group.project.CalculatorActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.group.project.CalculatorEquationsActivity -up-|> androidx.fragment.app.Fragment
+  com.group.project.CalculatorEquationsActivity o-- com.group.project.CalculatorActivity : CA
+  com.group.project.CalculatorEquationsActivity o-- com.group.project.CalculatorEquationsActivity.equationAdapter : eqAdapter
+  com.group.project.CalculatorEquationsActivity +-down- com.group.project.CalculatorEquationsActivity.equationAdapter
+  com.group.project.CalculatorEquationsActivity +-down- com.group.project.CalculatorEquationsActivity.fillListView
+  com.group.project.CalculatorEquationsActivity.equationAdapter -up-|> android.widget.ArrayAdapter
+  com.group.project.CalculatorEquationsActivity.fillListView -up-|> android.os.AsyncTask
+  com.group.project.CalculatorKeypadActivity -up-|> androidx.fragment.app.Fragment
+  com.group.project.CalculatorKeypadActivity o-- com.group.project.CalculatorActivity : CA
+  com.group.project.CalculatorVarpadActivity -up-|> androidx.fragment.app.Fragment
+  com.group.project.CalculatorVarpadActivity o-- com.group.project.CalculatorActivity : CA
+  com.group.project.CalenderActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.group.project.Contact .up.|> android.os.Parcelable
+  com.group.project.Contact .up.|> java.lang.Comparable
+  com.group.project.ContactActivity .up.|> com.group.project.ContactDetailFragment.ContactDetailFragmentRemovedListener
+  com.group.project.ContactActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.group.project.ContactActivity o-- com.group.project.ContactDetailFragment : cdf
+  com.group.project.ContactActivity o-- com.group.project.ContactActivity.ContactAdapter : contactAdapter
+  com.group.project.ContactActivity +-down- com.group.project.ContactActivity.ContactAdapter
+  com.group.project.ContactActivity.ContactAdapter -up-|> androidx.recyclerview.widget.RecyclerView.Adapter
+  com.group.project.ContactActivity.ContactAdapter +-down- com.group.project.ContactActivity.ContactAdapter.ContactViewHolder
+  com.group.project.ContactActivity.ContactAdapter.ContactViewHolder -up-|> androidx.recyclerview.widget.RecyclerView.ViewHolder
+  com.group.project.ContactDetailActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.group.project.ContactDetailActivity o-- com.group.project.ContactDetailFragment : cdf
+  com.group.project.ContactDetailActivity o-- com.group.project.Contact : contact
+  com.group.project.ContactDetailFragment -up-|> androidx.fragment.app.Fragment
+  com.group.project.ContactDetailFragment o-- com.group.project.Contact : contact
+  com.group.project.ContactDetailFragment o-- com.group.project.ContactDetailFragment.NumberAdapter : numberAdapter
+  com.group.project.ContactDetailFragment +-down- com.group.project.ContactDetailFragment.ContactDetailFragmentRemovedListener
+  com.group.project.ContactDetailFragment +-down- com.group.project.ContactDetailFragment.NumberAdapter
+  com.group.project.ContactDetailFragment.NumberAdapter -up-|> androidx.recyclerview.widget.RecyclerView.Adapter
+  com.group.project.ContactDetailFragment.NumberAdapter +-down- com.group.project.ContactDetailFragment.NumberAdapter.NumberViewHolder
+  com.group.project.ContactDetailFragment.NumberAdapter.NumberViewHolder -up-|> androidx.recyclerview.widget.RecyclerView.ViewHolder
+  com.group.project.ContactEditActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.group.project.ContactEditActivity o-- com.group.project.Contact : contact
+  com.group.project.ContactEditActivity o-- com.group.project.ContactEditActivity.EditNumberAdapter : editNumberAdapter
+  com.group.project.ContactEditActivity +-down- com.group.project.ContactEditActivity.EditNumberAdapter
+  com.group.project.ContactEditActivity.EditNumberAdapter -up-|> androidx.recyclerview.widget.RecyclerView.Adapter
+  com.group.project.ContactEditActivity.EditNumberAdapter +-down- com.group.project.ContactEditActivity.EditNumberAdapter.EditNumberViewHolder
+  com.group.project.ContactEditActivity.EditNumberAdapter.EditNumberViewHolder -up-|> androidx.recyclerview.widget.RecyclerView.ViewHolder
+  com.group.project.ContactSQLHelper -up-|> android.database.sqlite.SQLiteOpenHelper
+  com.group.project.ContactSQLHelper +-down- com.group.project.ContactSQLHelper.DeleteContactsTask
+  com.group.project.ContactSQLHelper +-down- com.group.project.ContactSQLHelper.GetContactsTask
+  com.group.project.ContactSQLHelper +-down- com.group.project.ContactSQLHelper.SaveContactsTask
+  com.group.project.ContactSQLHelper.DeleteContactsTask -up-|> android.os.AsyncTask
+  com.group.project.ContactSQLHelper.DeleteContactsTask o-- com.group.project.Contact : deleteContact
+  com.group.project.ContactSQLHelper.GetContactsTask -up-|> android.os.AsyncTask
+  com.group.project.ContactSQLHelper.SaveContactsTask -up-|> android.os.AsyncTask
+  com.group.project.ContactSQLHelper.SaveContactsTask o-- com.group.project.Contact : saveContact
+  com.group.project.CreateClass -up-|> androidx.appcompat.app.AppCompatActivity
+  com.group.project.CreateEvent -up-|> androidx.appcompat.app.AppCompatActivity
+  com.group.project.CreateEvent o-- com.group.project.aeEvent : event
+  com.group.project.EventList -up-|> androidx.appcompat.app.AppCompatActivity
+  com.group.project.MainActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.group.project.NotepadEditActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.group.project.NotepadEditActivity o-- com.group.project.noteModel.Note : temp
+  com.group.project.NotepadMainActivity .up.|> com.group.project.noteUtility.NoteEventListener
+  com.group.project.NotepadMainActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.group.project.NotepadMainActivity o-- com.group.project.noteAdapters.NotesAdapter : adapter
+  com.group.project.NotepadMainActivity +-down- com.group.project.NotepadMainActivity.NoteQuery
+  com.group.project.NotepadMainActivity.NoteQuery -up-|> android.os.AsyncTask
+  com.group.project.NotificationReceiver -up-|> android.content.BroadcastReceiver
+  com.group.project.addFood -up-|> androidx.appcompat.app.AppCompatActivity
+  com.group.project.aeCalenderDatabaseHelper -up-|> android.database.sqlite.SQLiteOpenHelper
+  com.group.project.aeCalenderDatabaseHelper +-down- com.group.project.aeCalenderDatabaseHelper.ExecGetClasses
+  com.group.project.aeCalenderDatabaseHelper +-down- com.group.project.aeCalenderDatabaseHelper.ExecGetEvents
+  com.group.project.aeCalenderDatabaseHelper.ExecGetClasses -up-|> android.os.AsyncTask
+  com.group.project.aeCalenderDatabaseHelper.ExecGetClasses o-- com.group.project.aeCalenderDatabaseHelper.ExecGetClasses.AsyncResponseClass : resultClass
+  com.group.project.aeCalenderDatabaseHelper.ExecGetClasses +-down- com.group.project.aeCalenderDatabaseHelper.ExecGetClasses.AsyncResponseClass
+  com.group.project.aeCalenderDatabaseHelper.ExecGetEvents -up-|> android.os.AsyncTask
+  com.group.project.aeCalenderDatabaseHelper.ExecGetEvents o-- com.group.project.aeCalenderDatabaseHelper.ExecGetEvents.AsyncResponseEvent : resultClass
+  com.group.project.aeCalenderDatabaseHelper.ExecGetEvents +-down- com.group.project.aeCalenderDatabaseHelper.ExecGetEvents.AsyncResponseEvent
+  com.group.project.aeClass .up.|> android.os.Parcelable
+  com.group.project.aeClassAdapter -up-|> android.widget.ArrayAdapter
+  com.group.project.aeEvent .up.|> android.os.Parcelable
+  com.group.project.aeEventAdapter -up-|> android.widget.ArrayAdapter
+  com.group.project.foodDatabaseHelper -up-|> android.database.sqlite.SQLiteOpenHelper
+  com.group.project.foodFragment -up-|> androidx.fragment.app.Fragment
+  com.group.project.foodFragment o-- com.group.project.food_list : fl
+  com.group.project.food_details -up-|> androidx.appcompat.app.AppCompatActivity
+  com.group.project.food_list -up-|> androidx.appcompat.app.AppCompatActivity
+  com.group.project.food_list o-- com.group.project.food_list.FoodAdapter : fdAdapter
+  com.group.project.food_list o-- com.group.project.foodDatabaseHelper : helper
+  com.group.project.food_list +-down- com.group.project.food_list.FoodAdapter
+  com.group.project.food_list +-down- com.group.project.food_list.dbInteract
+  com.group.project.food_list.FoodAdapter -up-|> android.widget.ArrayAdapter
+  com.group.project.food_list.dbInteract -up-|> android.os.AsyncTask
+  com.group.project.main_ab -up-|> androidx.appcompat.app.AppCompatActivity
+  com.group.project.weightActivities -up-|> androidx.appcompat.app.AppCompatActivity
+  com.group.project.weight_Goals -up-|> androidx.appcompat.app.AppCompatActivity
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

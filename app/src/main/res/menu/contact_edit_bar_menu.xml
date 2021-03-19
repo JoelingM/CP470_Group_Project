@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/bar_new_number"
+        android:icon="@drawable/nc_add_phone"
+        android:title="@string/nc_bar_new_number"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="0"
+        />
+    <item
+        android:id="@+id/bar_save_contact"
+        android:icon="@drawable/nc_save"
+        android:title="@string/nc_bar_save_contact"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="1"
+        />
+    <item
+        android:id="@+id/bar_delete_contact"
+        android:icon="@drawable/nc_trash"
+        android:title="@string/nc_bar_delete_contact"
+        app:showAsAction="never"
+        android:orderInCategory="2"
+        />
+    <item
+        android:id="@+id/bar_help"
+        android:title="@string/nc_bar_help"
+        app:showAsAction="never"
+        android:orderInCategory="3"
+        />
+</menu>

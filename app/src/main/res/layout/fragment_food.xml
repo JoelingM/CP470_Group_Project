@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".foodFragment">
+
+    <TextView
+        android:id="@+id/textFood"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/ab_nameFood"
+        android:textAlignment="textEnd" />
+
+    <TextView
+        android:id="@+id/textCalories"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_below="@id/textFood"
+        android:layout_alignParentStart="true"
+        android:text="@string/ab_CaloriesFood" />
+
+    <TextView
+        android:id="@+id/textFat"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_below="@id/textCalories"
+        android:layout_alignParentStart="true"
+        android:text="@string/ab_fatFood"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/textDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_below="@id/button7"
+        android:layout_alignParentStart="true"
+        android:text="@string/ab_descriptionFood" />
+
+    <TextView
+        android:id="@+id/Foodname"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@id/textFood"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/FoodCalories"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_below="@id/Foodname"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@id/textCalories"
+        android:ems="10"
+        android:inputType="none|number|numberDecimal"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/FoodFat"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_below="@id/FoodCalories"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@id/textFat"
+        android:ems="10"
+        android:inputType="none|number|numberDecimal"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textDescription"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/ab_foodHint"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/FoodFat"
+        android:layout_alignParentEnd="true"
+        android:text="@string/ab_delfood" />
+
+
+</RelativeLayout>

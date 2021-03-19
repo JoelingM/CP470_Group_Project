@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main_ab">
+
+
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    <Button
+        android:id="@+id/Weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Foods"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="128dp"
+        android:layout_marginEnd="129dp"
+        android:text="@string/ab_weights"
+        android:onClick="goToWeights"/>
+
+    <Button
+        android:id="@+id/Goals"
+        android:layout_width="163dp"
+        android:layout_height="70dp"
+
+        android:layout_alignParentStart="true"
+
+        android:layout_alignParentEnd="true"
+
+        android:layout_marginStart="126dp"
+        android:layout_marginEnd="122dp"
+        android:layout_above="@id/Foods"
+        android:text="@string/ab_Goal"
+        android:onClick="GoToGoals"/>
+
+    <Button
+        android:id="@+id/Foods"
+        android:layout_width="161dp"
+        android:layout_height="59dp"
+        android:layout_centerInParent="true"
+        android:onClick="goToFoods"
+        android:text="@string/ab_foods" />
+
+</RelativeLayout>

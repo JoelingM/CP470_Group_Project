@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalculatorVarpadActivity">
+
+    <TableLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+
+        android:layout_height="450dp"
+
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:id="@+id/row789SumSub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/xButton"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:text="@string/jm_xText" />
+
+            <Button
+                android:id="@+id/yButton"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:text="@string/jm_yText" />
+
+            <Button
+                android:id="@+id/zButton"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:text="@string/jm_zText" />
+
+            <Button
+                android:id="@+id/thetaButton"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:text="@string/jm_thetaText" />
+
+            <Button
+                android:id="@+id/phiButton"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:text="@string/jm_phiText" />
+        </TableRow>
+
+        <LinearLayout
+            android:id="@+id/rowLeftRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/rightButton"
+                android:layout_width="400dp"
+                android:layout_height="75dp"
+                android:text="@string/jm_enterEqText" />
+
+        </LinearLayout>
+
+
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

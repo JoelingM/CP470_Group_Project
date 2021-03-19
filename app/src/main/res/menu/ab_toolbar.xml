@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ab_menu_id">
+    <item
+        android:id="@+id/back_Item"
+        android:orderInCategory="141"
+        android:title="@string/ab_goBack"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/About_Item"
+        android:orderInCategory="141"
+        android:title="@string/ab_about"
+        app:showAsAction="never" />
+</menu>

@@ -1,0 +1,366 @@
+@startuml
+
+title __APP's Class Diagram__\n
+
+  namespace com.group.project {
+    class com.group.project.BuildConfig {
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.CalculatorActivity {
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.CalculatorEquationsActivity {
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.CalculatorKeypadActivity {
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.CalculatorVarpadActivity {
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.CalenderActivity {
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.Contact {
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.ContactActivity {
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.ContactDetailActivity {
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.ContactDetailFragment {
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.ContactEditActivity {
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.ContactSQLHelper {
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.CreateClass {
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.CreateEvent {
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.EventList {
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.MainActivity {
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.NotepadEditActivity {
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.NotepadMainActivity {
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.NotificationReceiver {
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.NotificationScheduler {
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.addFood {
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.aeCalenderDatabaseHelper {
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.aeClass {
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.aeClassAdapter {
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.aeEvent {
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.aeEventAdapter {
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.foodDatabaseHelper {
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.foodFragment {
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.food_details {
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.food_list {
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.main_ab {
+    }
+  }
+  
+
+  namespace com.group.project {
+    namespace noteAdapters {
+      class com.group.project.noteAdapters.NotesAdapter {
+      }
+    }
+  }
+  
+
+  namespace com.group.project {
+    namespace noteDB {
+      class com.group.project.noteDB.NoteDatabaseHelper {
+      }
+    }
+  }
+  
+
+  namespace com.group.project {
+    namespace noteModel {
+      class com.group.project.noteModel.Note {
+      }
+    }
+  }
+  
+
+  namespace com.group.project {
+    namespace noteUtility {
+      interface com.group.project.noteUtility.NoteEventListener {
+      }
+    }
+  }
+  
+
+  namespace com.group.project {
+    namespace noteUtility {
+      class com.group.project.noteUtility.NoteUtilities {
+      }
+    }
+  }
+  
+
+  namespace com.group.project {
+    namespace noteUtility {
+      class com.group.project.noteUtility.NotesViewFragment {
+      }
+    }
+  }
+  
+
+  namespace com.group.project {
+    namespace ui.calender {
+      class com.group.project.ui.calender.HomeFragment {
+      }
+    }
+  }
+  
+
+  namespace com.group.project {
+    namespace ui.classes {
+      class com.group.project.ui.classes.ClassFragment {
+      }
+    }
+  }
+  
+
+  namespace com.group.project {
+    namespace ui.dummy {
+      class com.group.project.ui.dummy.DummyContent {
+      }
+    }
+  }
+  
+
+  namespace com.group.project {
+    namespace ui.reminders {
+      class com.group.project.ui.reminders.EventsFragment {
+      }
+    }
+  }
+  
+
+  namespace com.group.project {
+    namespace ui.settings {
+      class com.group.project.ui.settings.SettingsFragment {
+      }
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.weightActivities {
+    }
+  }
+  
+
+  namespace com.group.project {
+    class com.group.project.weight_Goals {
+    }
+  }
+  
+
+  com.group.project.CalculatorActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.group.project.CalculatorEquationsActivity -up-|> androidx.fragment.app.Fragment
+  com.group.project.CalculatorEquationsActivity o-- com.group.project.CalculatorActivity : CA
+  com.group.project.CalculatorEquationsActivity o-- com.group.project.CalculatorEquationsActivity.equationAdapter : eqAdapter
+  com.group.project.CalculatorKeypadActivity -up-|> androidx.fragment.app.Fragment
+  com.group.project.CalculatorKeypadActivity o-- com.group.project.CalculatorActivity : CA
+  com.group.project.CalculatorVarpadActivity -up-|> androidx.fragment.app.Fragment
+  com.group.project.CalculatorVarpadActivity o-- com.group.project.CalculatorActivity : CA
+  com.group.project.CalenderActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.group.project.Contact .up.|> android.os.Parcelable
+  com.group.project.Contact .up.|> java.lang.Comparable
+  com.group.project.ContactActivity .up.|> com.group.project.ContactDetailFragment.ContactDetailFragmentRemovedListener
+  com.group.project.ContactActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.group.project.ContactActivity o-- com.group.project.ContactDetailFragment : cdf
+  com.group.project.ContactActivity o-- com.group.project.ContactActivity.ContactAdapter : contactAdapter
+  com.group.project.ContactDetailActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.group.project.ContactDetailActivity o-- com.group.project.ContactDetailFragment : cdf
+  com.group.project.ContactDetailActivity o-- com.group.project.Contact : contact
+  com.group.project.ContactDetailFragment -up-|> androidx.fragment.app.Fragment
+  com.group.project.ContactDetailFragment o-- com.group.project.Contact : contact
+  com.group.project.ContactDetailFragment o-- com.group.project.ContactDetailFragment.NumberAdapter : numberAdapter
+  com.group.project.ContactEditActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.group.project.ContactEditActivity o-- com.group.project.Contact : contact
+  com.group.project.ContactEditActivity o-- com.group.project.ContactEditActivity.EditNumberAdapter : editNumberAdapter
+  com.group.project.ContactSQLHelper -up-|> android.database.sqlite.SQLiteOpenHelper
+  com.group.project.CreateClass -up-|> androidx.appcompat.app.AppCompatActivity
+  com.group.project.CreateEvent -up-|> androidx.appcompat.app.AppCompatActivity
+  com.group.project.CreateEvent o-- com.group.project.aeEvent : event
+  com.group.project.EventList -up-|> androidx.appcompat.app.AppCompatActivity
+  com.group.project.MainActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.group.project.NotepadEditActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.group.project.NotepadEditActivity o-- com.group.project.noteModel.Note : temp
+  com.group.project.NotepadMainActivity .up.|> com.group.project.noteUtility.NoteEventListener
+  com.group.project.NotepadMainActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.group.project.NotepadMainActivity o-- com.group.project.noteAdapters.NotesAdapter : adapter
+  com.group.project.NotificationReceiver -up-|> android.content.BroadcastReceiver
+  com.group.project.addFood -up-|> androidx.appcompat.app.AppCompatActivity
+  com.group.project.aeCalenderDatabaseHelper -up-|> android.database.sqlite.SQLiteOpenHelper
+  com.group.project.aeClass .up.|> android.os.Parcelable
+  com.group.project.aeClassAdapter -up-|> android.widget.ArrayAdapter
+  com.group.project.aeEvent .up.|> android.os.Parcelable
+  com.group.project.aeEventAdapter -up-|> android.widget.ArrayAdapter
+  com.group.project.foodDatabaseHelper -up-|> android.database.sqlite.SQLiteOpenHelper
+  com.group.project.foodFragment -up-|> androidx.fragment.app.Fragment
+  com.group.project.foodFragment o-- com.group.project.food_list : fl
+  com.group.project.food_details -up-|> androidx.appcompat.app.AppCompatActivity
+  com.group.project.food_list -up-|> androidx.appcompat.app.AppCompatActivity
+  com.group.project.food_list o-- com.group.project.food_list.FoodAdapter : fdAdapter
+  com.group.project.food_list o-- com.group.project.foodDatabaseHelper : helper
+  com.group.project.main_ab -up-|> androidx.appcompat.app.AppCompatActivity
+  com.group.project.noteAdapters.NotesAdapter -up-|> androidx.recyclerview.widget.RecyclerView.Adapter
+  com.group.project.noteAdapters.NotesAdapter o-- com.group.project.noteUtility.NoteEventListener : listener
+  com.group.project.noteDB.NoteDatabaseHelper -up-|> android.database.sqlite.SQLiteOpenHelper
+  com.group.project.noteUtility.NotesViewFragment -up-|> androidx.fragment.app.Fragment
+  com.group.project.ui.calender.HomeFragment .up.|> com.group.project.aeCalenderDatabaseHelper.ExecGetEvents.AsyncResponseEvent
+  com.group.project.ui.calender.HomeFragment -up-|> androidx.fragment.app.Fragment
+  com.group.project.ui.calender.HomeFragment o-- com.group.project.aeEventAdapter : ea
+  com.group.project.ui.classes.ClassFragment .up.|> com.group.project.aeCalenderDatabaseHelper.ExecGetClasses.AsyncResponseClass
+  com.group.project.ui.classes.ClassFragment -up-|> androidx.fragment.app.Fragment
+  com.group.project.ui.classes.ClassFragment o-- com.group.project.aeClassAdapter : ca
+  com.group.project.ui.reminders.EventsFragment .up.|> com.group.project.aeCalenderDatabaseHelper.ExecGetEvents.AsyncResponseEvent
+  com.group.project.ui.reminders.EventsFragment -up-|> androidx.fragment.app.Fragment
+  com.group.project.ui.reminders.EventsFragment o-- com.group.project.aeEventAdapter : ea
+  com.group.project.ui.settings.SettingsFragment -up-|> androidx.fragment.app.Fragment
+  com.group.project.weightActivities -up-|> androidx.appcompat.app.AppCompatActivity
+  com.group.project.weight_Goals -up-|> androidx.appcompat.app.AppCompatActivity
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

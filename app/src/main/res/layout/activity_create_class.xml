@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CreateClass">
+
+    <EditText
+        android:id="@+id/class_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/ae_class_name"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/class_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/ae_location"
+        android:inputType="text"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ToggleButton
+            android:id="@+id/toggleSun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/ae_sun"
+            android:textOff="@string/ae_sun"
+            android:textOn="@string/ae_sun" />
+
+        <ToggleButton
+            android:id="@+id/toggleMon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/ae_mon"
+            android:textOff="@string/ae_mon"
+            android:textOn="@string/ae_mon" />
+
+        <ToggleButton
+            android:id="@+id/toggleTue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/ae_tue"
+            android:textOff="@string/ae_tue"
+            android:textOn="@string/ae_tue" />
+
+        <ToggleButton
+            android:id="@+id/toggleWed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/ae_wed"
+            android:textOff="@string/ae_wed"
+            android:textOn="@string/ae_wed" />
+
+        <ToggleButton
+            android:id="@+id/toggleThu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/ae_thu"
+            android:textOff="@string/ae_thu"
+            android:textOn="@string/ae_thu" />
+
+        <ToggleButton
+            android:id="@+id/toggleFri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/ae_fri"
+            android:textOff="@string/ae_fri"
+            android:textOn="@string/ae_fri" />
+
+        <ToggleButton
+            android:id="@+id/toggleSat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/ae_sat"
+            android:textOff="@string/ae_sat"
+            android:textOn="@string/ae_sat" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/startTimePicker"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/ae_time_start"
+            android:inputType="none"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"/>
+
+        <EditText
+            android:id="@+id/endTimePicker"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/ae_end_time"
+            android:inputType="none"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ae_semester"/>
+
+    <Spinner
+        android:id="@+id/semester_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/ae_saveButton"/>
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/ae_cancelButton"/>
+
+</LinearLayout>
+
+<Button
+    android:id="@+id/deleteButton"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/ae_deleteButton"
+    android:backgroundTint="@android:color/holo_red_dark"
+    android:textColor="@android:color/white"
+    android:visibility="invisible"/>
+
+
+</LinearLayout>
